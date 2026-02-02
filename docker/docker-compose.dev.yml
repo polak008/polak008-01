@@ -1,0 +1,24 @@
+# Docker Compose configuration for development
+# Run with: docker-compose -f docker/docker-compose.dev.yml up
+
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile.dev
+    container_name: portfolio-dev
+    ports:
+      - "5173:5173"
+    volumes:
+      - ../src:/app/src
+      - ../public:/app/public
+      - ../index.html:/app/index.html
+      - ../vite.config.ts:/app/vite.config.ts
+      - ../tailwind.config.js:/app/tailwind.config.js
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+    tty: true
+    command: npm run dev -- --host
