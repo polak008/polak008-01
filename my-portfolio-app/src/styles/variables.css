@@ -1,0 +1,9 @@
+:root {
+    --primary-color: #f9e79f; /* Light yellowish color */
+    --secondary-color: #f7dc6f; /* Darker yellowish color */
+    --background-color-light: #ffffff; /* Light background for light mode */
+    --background-color-dark: #2c3e50; /* Dark background for dark mode */
+    --text-color-light: #2c3e50; /* Dark text for light mode */
+    --text-color-dark: #ecf0f1; /* Light text for dark mode */
+    --border-color: #d5dbdb; /* Light border color */
+}

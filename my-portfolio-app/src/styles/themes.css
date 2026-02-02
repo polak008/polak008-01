@@ -1,0 +1,26 @@
+:root {
+    --primary-bg-color: #f9e79f; /* Light yellowish background */
+    --primary-text-color: #333; /* Dark text color */
+    --secondary-bg-color: #333; /* Dark background for dark mode */
+    --secondary-text-color: #f9e79f; /* Light text color for dark mode */
+}
+
+body {
+    background-color: var(--primary-bg-color);
+    color: var(--primary-text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background-color: var(--secondary-bg-color);
+    color: var(--secondary-text-color);
+}
+
+.navbar, .footer {
+    background-color: var(--primary-bg-color);
+    transition: background-color 0.3s ease;
+}
+
+body.dark-mode .navbar, body.dark-mode .footer {
+    background-color: var(--secondary-bg-color);
+}
